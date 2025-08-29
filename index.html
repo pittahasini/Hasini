@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pitta.Hasini — Portfolio</title>
+  <meta name="description" content="Portfolio of Pitta.Hasini — AI/ML & Web Developer. Projects, skills, and contact." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; font-family: Arial, sans-serif; }
+    body { margin:0; padding:0; background:#f9f9f9; color:#111; }
+    header, section { max-width:900px; margin:auto; padding:20px; }
+    h1,h2,h3{margin-bottom:10px;}
+    a{color:#1d4ed8; text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    .input{width:100%; padding:10px; margin-bottom:10px; border:1px solid #ccc; border-radius:5px;}
+    .btn{padding:10px 20px; background:#1d4ed8; color:white; border:none; border-radius:5px; cursor:pointer;}
+    .btn:hover{opacity:0.9;}
+    .project-card{border:1px solid #ccc; border-radius:10px; padding:15px; margin-bottom:15px; background:white;}
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Pitta.Hasini</h1>
+  <p>Email: <a href="mailto:pittahasini63@gmail.com">pittahasini63@gmail.com</a></p>
+  <p>GitHub: <a href="https://github.com/pittahasini/Hasini" target="_blank">https://github.com/pittahasini/Hasini</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/pitta-hasini-31a3ba351/" target="_blank">https://www.linkedin.com/in/pitta-hasini-31a3ba351/</a></p>
+</header>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="project-card">
+    <h3>Coming Soon </h3>
+    <p>I am currently building my portfolio and expanding my skills. I look forward to showcasing my projects soon as I continue learning and developing.!</p>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>I'm an AI/ML enthusiast currently building my portfolio. I focus on learning and developing projects to showcase my skills in the future.</p>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <form id="contactForm">
+    <input class="input" type="text" name="name" placeholder="Your Name" required />
+    <input class="input" type="email" name="email" placeholder="Your Email" required />
+    <textarea class="input" name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit" class="btn">Send</button>
+  </form>
+</section>
+
+<footer>
+  <p>© <span id="year"></span> Pitta.Hasini. All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('contactForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const data = new FormData(e.target);
+    const name = encodeURIComponent(data.get('name'));
+    const email = encodeURIComponent(data.get('email'));
+    const message = encodeURIComponent(data.get('message'));
+    const subject = `Portfolio Inquiry from ${name}`;
+    const body = `Name: ${name}%0AEmail: ${email}%0A%0A${message}`;
+    window.location.href = `mailto:pittahasini63@gmail.com?subject=${subject}&body=${body}`;
+  });
+</script>
+
+</body>
+</html>
