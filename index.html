@@ -1,75 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pitta.Hasini — Portfolio</title>
-  <meta name="description" content="Portfolio of Pitta.Hasini — AI/ML & Web Developer. Projects, skills, and contact." />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pitta Hasini - Portfolio</title>
   <style>
-    html { scroll-behavior: smooth; font-family: Arial, sans-serif; }
-    body { margin:0; padding:0; background:#f9f9f9; color:#111; }
-    header, section { max-width:900px; margin:auto; padding:20px; }
-    h1,h2,h3{margin-bottom:10px;}
-    a{color:#1d4ed8; text-decoration:none;}
-    a:hover{text-decoration:underline;}
-    .input{width:100%; padding:10px; margin-bottom:10px; border:1px solid #ccc; border-radius:5px;}
-    .btn{padding:10px 20px; background:#1d4ed8; color:white; border:none; border-radius:5px; cursor:pointer;}
-    .btn:hover{opacity:0.9;}
-    .project-card{border:1px solid #ccc; border-radius:10px; padding:15px; margin-bottom:15px; background:white;}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background: #f9fbff; /* light blue-white */
+      color: #333;
+    }
+
+    /* --- Header --- */
+    header {
+      background: linear-gradient(135deg, #007bff, #0056b3);
+      color: #fff;
+      padding: 50px 20px;
+      text-align: center;
+      border-bottom: 5px solid #00408a;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    nav {
+      margin-top: 20px;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffdd57;
+    }
+
+    /* --- Sections --- */
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      color: #007bff;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      position: relative;
+    }
+
+    section h2::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: #007bff;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+
+    /* --- Card Style --- */
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      padding: 25px;
+      margin: 20px 0;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    ul li {
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    /* --- Profile Links --- */
+    .links {
+      text-align: center;
+    }
+
+    .links a {
+      display: inline-block;
+      margin: 12px;
+      padding: 12px 20px;
+      border-radius: 25px;
+      background: #007bff;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 3px 10px rgba(0,123,255,0.3);
+    }
+
+    .links a:hover {
+      background: #0056b3;
+      transform: scale(1.05);
+    }
+
+    /* --- Resume Button --- */
+    .resume-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #007bff;
+      color: #fff;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 3px 12px rgba(0,123,255,0.3);
+      transition: all 0.3s;
+    }
+
+    .resume-btn:hover {
+      background: #0056b3;
+      transform: scale(1.08);
+    }
+
+    /* --- Footer --- */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #0056b3;
+      color: #fff;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
+  <!-- Header -->
+  <header>
+    <h1>Pitta Hasini</h1>
+    <p>Aspiring AIML Student | Problem Solver | Tech Enthusiast</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#profiles">Profiles</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<header>
-  <h1>Pitta.Hasini</h1>
-  <p>Email: <a href="mailto:pittahasini63@gmail.com">pittahasini63@gmail.com</a></p>
-  <p>GitHub: <a href="https://github.com/pittahasini/Hasini" target="_blank">https://github.com/pittahasini/Hasini</a></p>
-  <p>LinkedIn: <a href="https://www.linkedin.com/in/pitta-hasini-31a3ba351/" target="_blank">https://www.linkedin.com/in/pitta-hasini-31a3ba351/</a></p>
-  <img src="https://hackerrank-badges.vercel.app/pittahasini63" alt="HackerRank Badges" />
-</header>
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="card" style="text-align:center;">
+      <p>
+        Hello! I'm an AIML student passionate about technology, coding challenges, and problem-solving.  
+        Currently, I’m learning web development and programming while aiming to grow into a skilled software developer.  
+        I believe consistency and practice are the keys to success in tech 🚀.
+      </p>
+      <!-- Resume Button -->
+      <a href="resume.pdf" class="resume-btn" download>📄 Download Resume</a>
+    </div>
+  </section>
 
-<section id="projects">
-  <h2>Projects</h2>
-  <div class="project-card">
-    <h3>Coming Soon </h3>
-    <p>I am currently building my portfolio and expanding my skills. I look forward to showcasing my projects soon as I continue learning and developing.!</p>
-  </div>
-</section>
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="card" style="text-align:center;">
+      <ul>
+        <li>C Programming</li>
+        <li>Python</li>
+        <li>HTML & CSS (Beginner)</li>
+        <li>
+          Problem Solving 
+          <br>
+          <img src="https://img.shields.io/badge/HackerRank-⭐⭐%20(2%20Stars)-brightgreen?style=for-the-badge&logo=hackerrank" alt="HackerRank Badge">
+        </li>
+      </ul>
+    </div>
+  </section>
 
-<section id="about">
-  <h2>About Me</h2>
-  <p>I'm an AI/ML enthusiast currently building my portfolio. I focus on learning and developing projects to showcase my skills in the future.</p>
-</section>
+  <!-- Profiles Section -->
+  <section id="profiles">
+    <h2>My Profiles</h2>
+    <div class="card links">
+      <a href="https://github.com/pittahasini/Hasini" target="_blank">🌐 GitHub</a>
+      <a href="https://www.linkedin.com/in/pitta-hasini-31a3ba351" target="_blank">💼 LinkedIn</a>
+      <a href="https://www.hackerrank.com/profile/pittahasini63" target="_blank">🏆 HackerRank</a>
+    </div>
+  </section>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <form id="contactForm">
-    <input class="input" type="text" name="name" placeholder="Your Name" required />
-    <input class="input" type="email" name="email" placeholder="Your Email" required />
-    <textarea class="input" name="message" rows="5" placeholder="Your Message" required></textarea>
-    <button type="submit" class="btn">Send</button>
-  </form>
-</section>
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="card" style="text-align:center;">
+      📧 Email: <a href="mailto:pittahasini63@gmail.com" style="color:#007bff; font-weight:bold;">pittahasini63@gmail.com</a>
+    </div>
+  </section>
 
-<footer>
-  <p>© <span id="year"></span> Pitta.Hasini. All rights reserved.</p>
-</footer>
-
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-  document.getElementById('contactForm').addEventListener('submit', (e) => {
-    e.preventDefault();
-    const data = new FormData(e.target);
-    const name = encodeURIComponent(data.get('name'));
-    const email = encodeURIComponent(data.get('email'));
-    const message = encodeURIComponent(data.get('message'));
-    const subject = `Portfolio Inquiry from ${name}`;
-    const body = `Name: ${name}%0AEmail: ${email}%0A%0A${message}`;
-    window.location.href = `mailto:pittahasini63@gmail.com?subject=${subject}&body=${body}`;
-  });
-</script>
-
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Pitta Hasini | Portfolio Website</p>
+  </footer>
 </body>
 </html>
 
